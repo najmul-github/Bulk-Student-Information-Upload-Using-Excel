@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\User;
 use CodeIgniter\Controller;
 
 class AuthController extends Controller
@@ -19,29 +20,37 @@ class AuthController extends Controller
             // Get the input values (e.g., username and password)
             $username = $this->request->getPost('username');
             $password = $this->request->getPost('password');
+                        $userModel = new User(); // Replace with your User model name
+            $user = $userModel->where('name', $username)->first();
+            var_dump(password_verify($password, $user['password'], $user));
             // Validate input fields (e.g., required fields, format checks)
 
             // Simulate authentication (replace with actual authentication logic)
-            $authenticated = $this->authenticate($username, $password);
+            // $authenticated = $this->authenticate($username, $password);
 
-            if ($authenticated) {    
-                $session = session();
-                $userData = [
-                    'username' => $username, // Set the user data as needed
-                    'logged_in' => true
-                ];
-                $session->set($userData);
-            //     // Set user session or authentication flag
-            //     // Redirect to the admin dashboard
-                return redirect()->to('/admin');
-            } else {
-            //     // Authentication failed, show error or redirect to login with error message
-                return redirect()->to('/admin/login')->with('error', 'Invalid username or password');
-            }
+            // Check credentials against database
+            // $userModel = new User(); // Replace with your User model name
+            // $user = $userModel->where('name', $username)->first();
+
+
+            // if ($user && password_verify($password, $user['password'])) {    
+            //     // $session = session();
+            //     // $userData = [
+            //     //     'username' => $username, // Set the user data as needed
+            //     //     'logged_in' => true
+            //     // ];
+            //     // $session->set($userData);
+            // //     // Set user session or authentication flag
+            // //     // Redirect to the admin dashboard
+            //     return redirect()->to('/admin');
+            // } else {
+            // //     // Authentication failed, show error or redirect to login with error message
+            //     return redirect()->to('/admin/login')->with('error', 'Invalid username or password');
+            // }
         }
 
         // If the method is not POST, load the login view
-        return view('/admin/login');
+        // return view('/admin/login');
     }
 
     public function logout()

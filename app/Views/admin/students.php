@@ -114,17 +114,23 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <!-- Add more columns based on your student table schema -->
+                                    <th>User Name</th>
+                                    <th>Status</th>
+                                    <th>Remarks</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Populate this table with student data from your database -->
-                                <tr>
-                                    <td>1</td>
-                                    <td>John Doe</td>
-                                    <td>john@example.com</td>
-                                    <!-- Add more cells with student information -->
-                                </tr>
+                                <!-- Populate this table with student data from database -->
+                                <?php foreach ($students as $student): ?>
+                                    <tr>
+                                        <td><?php echo $student['id']; ?></td>
+                                        <td><?php echo $student['full_name']; ?></td>
+                                        <td><?php echo $student['email']; ?></td>
+                                        <td><?php echo $student['user_name']; ?></td>
+                                        <td><?php echo $student['status']; ?></td>
+                                        <td><?php echo $student['remarks']; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
                                 <!-- Repeat this row structure for each student -->
                             </tbody>
                         </table>
@@ -140,7 +146,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom scripts -->
     <script>
-        // Add your custom scripts here
+        // Add custom scripts here
     </script>
 </body>
 </html>

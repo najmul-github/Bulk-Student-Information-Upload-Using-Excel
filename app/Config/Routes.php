@@ -16,7 +16,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('/', 'AdminController::index');
     $routes->get('students', 'AdminController::getStudents');
     $routes->get('file/upload', 'AdminController::showUploadForm');
-    $routes->post('file/process_excel_upload', 'AdminController::uploadExcel');
+    $routes->post('file/process_excel_upload', 'AdminController::upload');
 });
 
 // $routes->get('/', 'HomeController::index');
