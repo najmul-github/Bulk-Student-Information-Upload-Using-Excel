@@ -99,7 +99,6 @@
                     <a href="/educational-management-systems/public/admin"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a>
                     <a href="/educational-management-systems/public/admin/students"><i class="fas fa-user-graduate mr-2"></i> Students</a>
                     <a href="/educational-management-systems/public/admin/file/upload"><i class="fas fa-file-upload mr-2"></i> Upload Excel</a>
-                    <!-- Add more navigation options with icons -->
                 </div>
             </div>
             <div class="col-md-9">

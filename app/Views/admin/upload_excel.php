@@ -71,7 +71,6 @@
                 <a href="/educational-management-systems/public/admin"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a>
                 <a href="/educational-management-systems/public/admin/students"><i class="fas fa-user-graduate mr-2"></i> Students</a>
                 <a href="/educational-management-systems/public/admin/file/upload"><i class="fas fa-file-upload mr-2"></i> Upload Excel</a>
-                <!-- Add more navigation options with icons -->
             </div>
             </div>
             <div class="col-md-9">
@@ -98,8 +97,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom scripts -->
-    <script>
-        // Add your custom scripts here
-    </script>
 </body>
 </html>
